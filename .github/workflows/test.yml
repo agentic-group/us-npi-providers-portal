@@ -13,7 +13,5 @@ jobs:
         with:
           node-version: 22
       - run: npm i --no-audit --no-fund
-      - run: npm test
-      - name: English only
-        run: |
-          if grep -nP '[\x{3040}-\x{30ff}\x{4e00}-\x{9fff}]' src/*.mjs site.json; then echo "Japanese text in a public file"; exit 1; fi
+      - name: Validate (English only + build + test)
+        run: npm run validate
