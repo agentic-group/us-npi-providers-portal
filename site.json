@@ -1,0 +1,22 @@
+{
+  "name": "NPI Provider Index",
+  "slug": "us-npi-providers",
+  "host": "providers.navi-index.com",
+  "lang": "en",
+  "operator": "Agentic, Inc.",
+  "operator_legal_name": "Agentic, Inc.",
+  "operator_url": "https://agentic-company.net/",
+  "operator_corporate_number": "6011201027255",
+  "keyword": "npi lookup",
+  "item_type": "One US health-care provider registered in the CMS NPPES NPI Registry = 1 row (NPI, provider type, name and credential, primary NUCC taxonomy, practice address, practice phone).",
+  "answer": {
+    "question": "Which dentists, counselors, optometrists, psychologists or social workers are registered in a US state or city, and what are their NPI number, specialty, practice address and phone?",
+    "fields": ["NPI number", "Primary specialty (NUCC taxonomy)", "Practice address", "Practice phone"],
+    "source_url": "https://download.cms.gov/nppes/NPI_Files.html"
+  },
+  "ga4_measurement_id": "G-JQ2V28FQ23",
+  "ga4_property": "properties/557573231",
+  "indexnow_key": "5ee852bf1551cfe1a8fb76c13faeeadf",
+  "cloudflare": {"account": "abd7230583dfbed9ea0e9d606cac0db3", "grantry_scope": "portal-cloudflare", "zone": "navi-index.com", "zone_id": "5377dda84a3d3f53ad8eb2b4b992bc26", "worker": "portal-us-npi-providers"},
+  "moved_from": {"site": "https://atlas.navi-index.com/", "prefix": "npiregistry-", "date": "2026-10-06"}
+}

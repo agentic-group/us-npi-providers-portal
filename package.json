@@ -1,0 +1,12 @@
+{
+  "name": "us-npi-providers-portal",
+  "private": true,
+  "type": "module",
+  "description": "NPI Provider Index (providers.navi-index.com): US health-care providers from the CMS NPPES NPI Registry, served by one Cloudflare Worker.",
+  "scripts": {
+    "build": "node scripts/build-worker.mjs",
+    "test": "node scripts/build-worker.mjs && node scripts/test.mjs"
+  },
+  "engines": { "node": ">=20" },
+  "devDependencies": { "esbuild": "0.25.10" }
+}
