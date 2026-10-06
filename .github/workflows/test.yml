@@ -1,0 +1,19 @@
+name: test
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm i --no-audit --no-fund
+      - run: npm test
+      - name: English only
+        run: |
+          if grep -nP '[\x{3040}-\x{30ff}\x{4e00}-\x{9fff}]' src/*.mjs site.json; then echo "Japanese text in a public file"; exit 1; fi
